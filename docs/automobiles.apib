@@ -1,0 +1,213 @@
+# Group Automobile Catalog
+
+## Automakers [/api/automakers/{?name,country}]
+
++ Parameters
+
+    + name: `Technology` (string, optional) - Filter the results by the name of the automaker.
+    + country: `Technology` (string, optional) - Filter the results by the country of the automaker.
+
+### List [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (Automaker GET)
+        + (Automaker GET)
+        + (Automaker GET)
+
+### Create [POST]
+
++ Request (application/json)
+
+    + Attributes (Automaker POST)
+
++ Response 200 (application/json)
+
+    + Attributes (Automaker GET)
+
+## Automaker [/api/automakers/{id}/]
+
++ Parameters
+
+    + id: `1` (number, required) - Automaker Identifier
+
+
+### Detail [GET]
+
++ Response 200 (application)
+
+    + Attributes (Automaker GET)
+
+### Update [PUT]
+
++ Request (application/json)
+
+    + Attributes (Automaker PUT)
+
++ Response 200 (application/json)
+
+    + Attributes (Automaker GET)
+
+### Partial Update [PATCH]
+
++ Request (application/json)
+
+    + Attributes (Automaker PATCH)
+
++ Response 200 (application/json)
+
+    + Attributes (Automaker GET)
+
+### Remove [DELETE]
+
++ Response 204 (application/json)
+
+## VehicleModels [/api/vehiclemodels/{?vehicle_type,automaker,name}]
+
++ Parameters
+
+    + name: `Uno` (string, optional) - Filter vehicle models by name.
+    + automaker: `1` (number, optional) - Filter results by vehicle models which belong to specified automaker.
+    + vehicle_type: `1` (number, optional) - Filter results by vehicle models which belong to specified type.
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
+### List [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (VehicleModel GET)
+        + (VehicleModel GET)
+        + (VehicleModel GET)
+
+### Create [POST]
+
++ Request (application/json)
+
+    + Attributes (VehicleModel POST)
+
++ Response 200 (application/json)
+
+    + Attributes (VehicleModel GET)
+
+## VehicleModel [/api/vehiclemodels/{id}/]
+
++ Parameters
+
+    + id: `1` (number, required) - VehicleModel ID
+
+### Detail [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (VehicleModel GET)
+
+### Update [PUT]
+
++ Request (application/json)
+
+    + Attributes (VehicleModel PUT)
+
++ Response 200 (application/json)
+
+    + Attributes (VehicleModel GET)
+
+### Partial Update [PATCH]
+
++ Request (application/json)
+
+    + Attributes (VehicleModel PATCH)
+
++ Response 200 (application/json)
+
+    + Attributes (VehicleModel GET)
+
+### Remove [DELETE]
+
++ Response 204 (application/json)
+
+## Vehicles [/api/vehicles/{?model,color,mileage,mileage__gte,mileage__lte,engine_volume,engine_volume__gte,engine_volume__lte,model_name,automaker,automaker_name,vehicle_type}]
+
++ Parameters
+
+    + color: `Black` (string, optional) - Filter vehicle by color which contains the specified value.
+    + model: `1` (number, optional) - Filter results by vehicle which belong to specified model.
+    + model_name: `Uno` (string, optional) - Filter vehicle by model name.
+    + mileage: `1` (number, optional) - Filter results by vehicle which have the specified mileage.
+    + mileage__gte: `1` (number, optional) - Filter results by vehicle which have the specified mileage, or more.
+    + mileage__lte: `1` (number, optional) - Filter results by vehicle which have the specified mileage, or less.
+    + engine_volume: `1` (number, optional) - Filter results by vehicle which have the specified engine volume.
+    + engine_volume__gte: `1` (number, optional) - Filter results by vehicle which have the specified engine volume, or more.
+    + engine_volume__lte: `1` (number, optional) - Filter results by vehicle which have the specified engine volume, or less.
+    + automaker: `1` (number, optional) - Filter results by vehicle which belong to specified automaker.
+    + automaker_name: `1` (string, optional) - Filter results by automakers whose name contains the specified value.
+    + vehicle_type: `1` (number, optional) - Filter results by vehicle which belong to specified type.
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
+### List [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (array)
+        + (Vehicle GET)
+        + (Vehicle GET)
+        + (Vehicle GET)
+
+### Create [POST]
+
++ Request (application/json)
+
+    + Attributes (Vehicle POST)
+
++ Response 200 (application/json)
+
+    + Attributes (Vehicle GET)
+
+## Vehicles [/api/vehicles/{id}/]
+
++ Parameters
+
+    + id: `1` (number, required) - Vehicles ID
+
+### Detail [GET]
+
++ Response 200 (application/json)
+
+    + Attributes (Vehicle GET)
+
+### Update [PUT]
+
++ Request (application/json)
+
+    + Attributes (Vehicle PUT)
+
++ Response 200 (application/json)
+
+    + Attributes (Vehicle GET)
+
+### Partial Update [PATCH]
+
++ Request (application/json)
+
+    + Attributes (Vehicle PATCH)
+
++ Response 200 (application/json)
+
+    + Attributes (Vehicle GET)
+
+### Remove [DELETE]
+
++ Response 204 (application/json)

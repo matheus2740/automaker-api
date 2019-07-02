@@ -1,0 +1,14 @@
+{
+    "/automakers/": {
+        "target": "http://localhost:8000",
+        "secure": false
+    },
+    "/vehicles/": {
+        "target": "http://localhost:8000",
+        "secure": false
+    },
+    "/vehiclemodels/": {
+        "target": "http://localhost:8000",
+        "secure": false
+    }
+}

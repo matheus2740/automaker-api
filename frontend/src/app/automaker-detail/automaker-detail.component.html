@@ -1,0 +1,15 @@
+<div *ngIf="automaker">
+  <h2>{{ automaker.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ automaker.id }}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="automaker.name" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>country:
+      <input [(ngModel)]="automaker.country" placeholder="country">
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+</div>

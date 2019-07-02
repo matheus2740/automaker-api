@@ -1,0 +1,9 @@
+<h2>Vehicle Models</h2>
+<a href="/vehicle-model/new">NEW</a>
+<ul class="automakers">
+  <li *ngFor="let vModel of vModels">
+    <a routerLink="/vehicle-model/{{vModel.id}}">
+      <span class="badge">{{ vModel.id }}</span> {{ vModel.name }} ({{ vModel.automaker_name }})
+    </a>
+  </li>
+</ul>

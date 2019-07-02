@@ -1,0 +1,129 @@
+# Data Structures
+
+## Automaker GET (object)
+
++ id: `1` (number, required) - ID
++ name: `Fiat` (string, required) - Name of the Automaker
++ country: `Italy` (string, required) - Country of origin
+
+
+## Automaker POST (object)
+
++ id: `1` (number, required) - ID
++ name: `Fiat` (string, required) - Name of the Automaker
++ country: `Italy` (string, required) - Country of origin
+
+## Automaker PUT (object)
+
++ id: `1` (number, required) - ID
++ name: `Fiat` (string, required) - Name of the Automaker
++ country: `Italy` (string, required) - Country of origin
+
+## Automaker PATCH (object)
+
++ id: `1` (number, required) - ID
++ name: `Fiat` (string, optional) - Name of the Automaker
++ country: `Italy` (string, optional) - Country of origin
+
+## VehicleModel GET (object)
+
++ id: `1` (number, required) - ID
++ vehicle_type: `2` (number, required) - Enum (Choices).
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
++ automaker: `2` (number, required) - ID of the Automaker
++ name: `Uno` (string, required) - Name of the model
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the model
+
+
+## VehicleModel POST (object)
+
++ id: `1` (number, required) - ID
++ vehicle_type: `2` (number, required) - Enum (Choices).
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
++ automaker: `2` (number, required) - ID of the Automaker
++ name: `Uno` (string, required) - Name of the model
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the model
+
+## VehicleModel PUT (object)
+
++ id: `1` (number, required) - ID
++ vehicle_type: `2` (number, required) - Enum (Choices).
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
++ automaker: `2` (number, required) - ID of the Automaker
++ name: `Uno` (string, required) - Name of the model
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the model
+
+## VehicleModel PATCH (object)
+
++ id: `1` (number, required) - ID
++ vehicle_type: `2` (number, optional) - Enum (Choices).
+
+        | Option | Description |
+        |--------|-----------|
+        | 1      | CAR |
+        | 2      | MOTORCYCLE |
+        | 3      | SUV |
+        | 3      | TRUCK |
+
++ automaker: `2` (number, optional) - ID of the Automaker
++ name: `Uno` (string, optional) - Name of the model
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the model
+
+## Vehicle GET (object)
+
++ id: `1` (number, required) - ID
++ model: `2` (number, required) - ID of the VehicleModel
++ color: `Black` (string, required) - Color of the Vehicle
++ mileage: `1234` (number, required) - How many KM the vehicle has run
++ engine_volume: `1234` (number, required) - Engine volume capacity (in ml)
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the vehicle
+
+
+## Vehicle POST (object)
+
++ id: `1` (number, required) - ID
++ model: `2` (number, required) - ID of the VehicleModel
++ color: `Black` (string, required) - Color of the Vehicle
++ mileage: `1234` (number, required) - How many KM the vehicle has run
++ engine_volume: `1234` (number, required) - Engine volume capacity (in ml)
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the vehicle
+
+## Vehicle PUT (object)
+
++ id: `1` (number, required) - ID
++ model: `2` (number, required) - ID of the VehicleModel
++ color: `Black` (string, required) - Color of the Vehicle
++ mileage: `1234` (number, required) - How many KM the vehicle has run
++ engine_volume: `1234` (number, required) - Engine volume capacity (in ml)
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the vehicle
+
+## Vehicle PATCH (object)
+
++ id: `1` (number, optional) - ID
++ model: `2` (number, optional) - ID of the VehicleModel
++ color: `Black` (string, optional) - Color of the Vehicle
++ mileage: `1234` (number, optional) - How many KM the vehicle has run
++ engine_volume: `1234` (number, optional) - Engine volume capacity (in ml)
++ stock_photo: `http://localhost:8000/images/models_pictures/no_image.png` (string, optional) - URL to the photo of the vehicle
+

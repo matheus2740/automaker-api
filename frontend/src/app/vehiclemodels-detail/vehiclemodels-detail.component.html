@@ -1,0 +1,25 @@
+<div *ngIf="vModel">
+  <h2>{{ vModel.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ vmodel.id }}</div>
+  <div>
+    <label>vehicle type:
+      <input [(ngModel)]="vModel.vehicle_type" placeholder="vehicle type">
+    </label>
+  </div>
+  <div>
+    <label>automaker:
+      <input [(ngModel)]="vModel.automaker" placeholder="automaker">
+    </label>
+  </div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="vModel.name" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>stock_photo:
+      <input [(ngModel)]="vModel.stock_photo" placeholder="stock photo">
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+</div>

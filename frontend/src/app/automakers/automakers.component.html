@@ -1,0 +1,9 @@
+<h2>Automakers</h2>
+<a href="/automaker/new">NEW</a>
+<ul class="automakers">
+  <li *ngFor="let automaker of automakers">
+    <a routerLink="/automaker/{{automaker.id}}">
+      <span class="badge">{{ automaker.id }}</span> {{ automaker.name }}
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,49 @@
+<h2>Vehicles</h2>
+<a href="/vehicle/new">NEW</a>
+
+<h4>FILTERS:</h4>
+<div>
+  <label>color:
+    <input [(ngModel)]="filters.color" placeholder="color">
+  </label>
+</div>
+<div>
+  <label>model name:
+    <input [(ngModel)]="filters.model_name" placeholder="color">
+  </label>
+</div>
+<div>
+  <label>automaker name:
+    <input [(ngModel)]="filters.automaker_name" placeholder="color">
+  </label>
+</div>
+<div>
+  <label>mileage min:
+    <input [(ngModel)]="filters.mileage__gte" placeholder="mileage">
+  </label>
+</div>
+<div>
+  <label>mileage max:
+    <input [(ngModel)]="filters.mileage__lte" placeholder="mileage">
+  </label>
+</div>
+<div>
+  <label>engine volume min:
+    <input [(ngModel)]="filters.engine_volume__gte" placeholder="engine volume">
+  </label>
+</div>
+<div>
+  <label>engine volume max:
+    <input [(ngModel)]="filters.engine_volume__lte" placeholder="engine volume">
+  </label>
+</div>
+<button (click)="getVehicles()">apply filters</button>
+
+
+<ul class="automakers">
+  <li *ngFor="let vehicle of vehicles">
+    <a routerLink="/vehicle/{{vehicle.id}}">
+      <span class="badge">{{ vehicle.id }}</span> {{ vehicle.model.name }} ({{ vehicle.model.automaker_name }}) / {{ vehicle.mileage }} KM - Engine: {{ vehicle.engine_volume }} ML
+    </a>
+  </li>
+</ul>

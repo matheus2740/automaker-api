@@ -1,0 +1,30 @@
+<div *ngIf="vehicle">
+  <h2>{{ vehicle.name | uppercase }} Details - {{ vehicle.model.name }} ({{ vehicle.model.automaker_name }})</h2>
+  <div><span>id: </span>{{ vehicle.id }}</div>
+  <div>
+    <label>color:
+      <input [(ngModel)]="vehicle.color" placeholder="color">
+    </label>
+  </div>
+  <div>
+    <label>model:
+      <input [(ngModel)]="vehicle.model_id" placeholder="color">
+    </label>
+  </div>
+  <div>
+    <label>mileage:
+      <input [(ngModel)]="vehicle.mileage" placeholder="mileage">
+    </label>
+  </div>
+  <div>
+    <label>engine volume:
+      <input [(ngModel)]="vehicle.engine_volume" placeholder="engine volume">
+    </label>
+  </div>
+  <div>
+    <label>vanity photo:
+      <input [(ngModel)]="vehicle.vanity_photo" placeholder="vanity photo">
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+</div>
